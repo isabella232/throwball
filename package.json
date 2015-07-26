@@ -23,7 +23,8 @@
     "sails": "~0.11.0",
     "sails-disk": "~0.10.0",
     "sails-postgresql": "^0.10.16",
-    "coinbase": "^1.0.3"
+    "coinbase": "^1.0.3",
+    "request": "^2.60.0"
   },
   "scripts": {
     "debug": "node debug app.js",
