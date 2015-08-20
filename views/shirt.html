@@ -1,0 +1,236 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="jquery.js"></script>
+  	<link href="http://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Payload</title>
+    <style>
+        .mynav {
+            /* Safari 4-5, Chrome 1-9 */
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#C5C5C5), to(#E0DFDF));
+            /* Safari 5.1, Chrome 10+ */
+            background: -webkit-linear-gradient(top, #E0DFDF, #C5C5C5);
+            /* Firefox 3.6+ */
+            background: -moz-linear-gradient(top, #E0DFDF, #C5C5C5);
+            /* IE 10 */
+            background: -ms-linear-gradient(top, #E0DFDF, #C5C5C5);
+            /* Opera 11.10+ */
+            background: -o-linear-gradient(top, #E0DFDF, #C5C5C5);
+            height: 80px;
+        }
+
+        .myfont {
+            font-family: 'Muli', sans-serif;
+            font-size: 20px;
+            color: #5e5b5b;
+            margin-right: 15px;
+            margin-left: 15px;
+            margin-top: 25px;
+        }
+
+        .cont {
+            margin-top: 100px;
+        }
+
+        .calc {
+            margin-left: 100px;
+        }
+
+            .calc table {
+                border-spacing: 5px;
+                border-collapse: separate;
+            }
+
+        body {
+            color: #696969;
+        }
+
+        .calc table tr {
+            /* Safari 4-5, Chrome 1-9 */
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#C5C5C5), to(#E0DFDF));
+            /* Safari 5.1, Chrome 10+ */
+            background: -webkit-linear-gradient(top, #E0DFDF, #C5C5C5);
+            /* Firefox 3.6+ */
+            background: -moz-linear-gradient(top, #E0DFDF, #C5C5C5);
+            /* IE 10 */
+            background: -ms-linear-gradient(top, #E0DFDF, #C5C5C5);
+            /* Opera 11.10+ */
+            background: -o-linear-gradient(top, #E0DFDF, #C5C5C5);
+            font-size: 70pt;
+            margin-bottom: 5px;
+        }
+
+        .calc table td {
+            width: 120px;
+            text-align: center;
+            border-radius: 10px;
+            border-color: #979797;
+            border: 1px solid;
+            margin-right: 5px;
+        }
+
+        .calc table button {
+            width: 100%;
+            height: auto;
+            background-color: inherit;
+            border: none;
+            border-radius: 10px;
+        }
+
+            .calc table button:hover {
+                background-color: #E0DFDF;
+                color: cornflowerblue;
+            }
+
+        .mybutton {
+            margin-top: 15px;
+            width: 150px;
+            height: 60px;
+            background-color: cornflowerblue;
+            font-size: 20pt;
+            border-radius: 10px;
+            border: 1px solid;
+            border-color: #979797;
+            color: white;
+        }
+
+            .mybutton:hover {
+                background-color: #E0DFDF;
+                background-image: none;
+                color: #979797;
+            }
+
+        .amount {
+            font-size: 60pt;
+            text-align: center;
+        }
+
+        .amountb {
+            font-size: 30pt;
+            text-align: right;
+        }
+
+        .myinput {
+            background-color: white;
+            border: none;
+            font-size: 70pt;
+            width: 340px;
+            text-align: right;
+        }
+
+        .swap {
+            float: right;
+            margin-top: 230px;
+        }
+        .forminp
+        {
+            border:2px solid;
+            border-radius:5px;
+            font-size:20px;
+            width:380px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mynav">
+        <div style="float:left ;margin-left:30px">
+            <a class="navbar-brand" href="#"><img alt="Payload" src="images/logo.png" /></a>
+            <p class="navbar-text"><img alt="Payload" src="images/payload.png" /></p>
+        </div>
+        <div style="float:right">
+            <p class="myfont" style="font-weight: bold;">Point of Sale App</p>
+        </div>
+    </div>
+    <div style="width:1500px; margin-left:200px;">
+        <div class="cont">
+            <div class="calc" style="float:left; width:300px">
+                <h2>Enter details</h2>
+                <form>
+                    <h4>Name</h4>
+                    <input type="text" id="name" class="forminp" />
+
+                    <h4>Phone</h4>
+                    <input type="tel" id="phone" class="forminp" />
+
+                    <h4>Email</h4>
+                    <input type="email" id="email" class="forminp" />
+
+                    <h4>Address</h4>
+                    <textarea type="text" id="add" class="forminp" ></textarea>
+
+                    <a class="mybutton" href="shirtqr.html">Proceed</a>
+                    
+                </form>
+
+            </div>
+           
+            <div style="float:right; margin-left:100px ;">
+                <div style="float:left;margin-right:200px">
+                    <h2>Product you buying</h2>
+
+                    <img src="images/shirt_plus_text.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+
+<script>
+    var tval = document.getElementById("topvalue");
+    var bval = document.getElementById("bottomvalue");
+
+    var ttxt = document.getElementById("toptext");
+    var btxt = document.getElementById("bottomtext");
+
+    var sp = document.getElementById("txt");
+
+    var pub = 1;
+    var num = 29510;
+    function calc(x) {
+        if (x == 12) {
+            tval.value = 0;
+            bval.innerHTML = 0;
+            return;
+        }
+        if (tval.value == 0) {
+            tval.value = x;
+        }
+        else {
+            tval.value = tval.value + x;
+        }
+        if (pub == 1) {
+            bval.innerHTML = (parseInt(tval.value) / num).toFixed(3);
+        }
+        else {
+            bval.innerHTML = (parseFloat(tval.value) * num).toFixed(3);
+        }
+
+    }
+    function swap() {
+        tval.value = 0;
+        bval.innerHTML = 0;
+        if (pub == 1) {
+            ttxt.innerHTML = " BTC";
+            btxt.innerHTML = " PKR";
+            sp.innerHTML = "<br />click to enter<br />amount in PKR";
+            pub = 0;
+        }
+        else {
+            ttxt.innerHTML = " PKR";
+            btxt.innerHTML = " BTC";
+            sp.innerHTML = "<br />click to enter<br />amount in BTC";
+            pub = 1;
+        }
+    }
+    function postIt()
+    {
+        window.location.href='shirtqr.html';   
+    }
+</script>
